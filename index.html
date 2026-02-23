@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRƯỜNG THPT Võ Nguyên Giáp</title>
+
+<style>
+/* BẢNG */
+.schedule{
+overflow-x:auto;
+margin-bottom:50px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:rgba(255,255,255,0.1);
+}
+
+th, td{
+border:1px solid rgba(255,255,255,0.3);
+padding:12px;
+text-align:center;
+}
+
+th{
+background:rgba(0,0,0,0.6);
+}
+
+/* FORM */
+.form-box{
+max-width:600px;
+margin:auto;
+background:rgba(255,255,255,0.1);
+padding:30px;
+border-radius:15px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border:none;
+border-radius:8px;
+}
+
+.form-box button{
+width:100%;
+padding:12px;
+background:#00ffff;
+border:none;
+border-radius:25px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.form-box button:hover{
+background:white;
+color:black;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    background:rgba(0,0,0,0.7);
+    padding:15px 0;
+    text-align:center;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00ffff;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+    text-shadow:0 0 20px #00ffff;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:700px;
+}
+
+.btn{
+    margin-top:30px;
+    padding:12px 30px;
+    border:2px solid #00ffff;
+    color:#00ffff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#00ffff;
+    color:black;
+    box-shadow:0 0 20px #00ffff;
+}
+
+/* SECTION */
+.section{
+    padding:100px 10%;
+}
+
+.section h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:36px;
+}
+
+/* GRID CLUB */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.club{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.club:hover{
+    transform:translateY(-10px);
+}
+
+.club img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.club-content{
+    padding:20px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:black;
+    margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#home">Trang chủ</a>
+<a href="#clubs">Câu lạc bộ</a>
+<a href="#gallery">Hình ảnh</a>
+<a href="#contact">Đăng ký</a>
+</nav>
+
+<section class="hero" id="home">
+<h1>TRƯỜNG THPT Võ Nguyên Giáp</h1>
+<p>Trường THPT Võ Nguyên Giáp - Nơi phát triển tài năng và đam mê của học sinh.</p>
+<a href="#clubs" class="btn">Khám phá ngay</a>
+</section>
+<section class="section" id="clubs">
+<h2>CÁC CÂU LẠC BỘ</h2>
+
+<div class="grid">
+
+<!-- STEM -->
+<div class="club">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo0zM_-H6qbodS7TqdMp1qdz0Er5nHFIhj28bnB9CzjWMY3UF933HdNUxB&s=10">
+<div class="club-content">
+<h3>1. CLB STEM</h3>
+<p><b>Tôn chỉ:</b> Sáng tạo – Nghiên cứu – Ứng dụng công nghệ.</p>
+<p><b>Tiêu chí:</b></p>
+<ul>
+<li>Yêu khoa học</li>
+<li>Làm việc nhóm tốt</li>
+<li>Tham gia đầy đủ</li>
+</ul>
+</div>
+</div>
+
+<!-- Văn hóa đọc -->
+<div class="club">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd2W0bD2QH-d9RRNzIRbI8nQzm5RGWMg7k0slojyaNRMxt2Ru8ZMbLJ9eX&s=10">
+<div class="club-content">
+<h3>2. CLB Văn hóa đọc</h3>
+<p><b>Tôn chỉ:</b> Phát triển văn hóa đọc và tư duy.</p>
+<p><b>Tiêu chí:</b></p>
+<ul>
+<li>Đọc sách thường xuyên</li>
+<li>Chia sẻ kiến thức</li>
+<li>Giữ gìn sách</li>
+</ul>
+</div>
+</div>
+
+<!-- Sống xanh -->
+<div class="club">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY6Ljycl6qAOyvHXmQCyOpcaBROycTrPlOGvjhgH6BlA&s=10">
+<div class="club-content">
+<h3>3. CLB Sống xanh</h3>
+<p><b>Tôn chỉ:</b> Hành động vì môi trường.</p>
+<p><b>Tiêu chí:</b></p>
+<ul>
+<li>Ý thức bảo vệ môi trường</li>
+<li>Tham gia hoạt động xanh</li>
+<li>Lan tỏa lối sống bền vững</li>
+</ul>
+</div>
+</div>
+
+<!-- Pháp luật -->
+<div class="club">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGvC7-aqLJOnAtMtOogI39ffOq-Vjc7ff5NDOLx4e8Cck7b_1xscIumlk&s=10">
+<div class="club-content">
+<h3>4. CLB Pháp luật</h3>
+<p><b>Tôn chỉ:</b> Nâng cao hiểu biết pháp luật.</p>
+<p><b>Tiêu chí:</b></p>
+<ul>
+<li>Tìm hiểu luật cơ bản</li>
+<li>Tham gia tọa đàm</li>
+<li>Tuyên truyền nội quy</li>
+</ul>
+</div>
+</div>
+
+<!-- Văn nghệ -->
+<div class="club">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE4Ibc4CHkPPvf2oQ4mdNF3jv5xoFxIVcflnOToU5My_xN9_MSPtwe0fA&s=10">
+<div class="club-content">
+<h3>5. CLB Văn nghệ</h3>
+<p><b>Tôn chỉ:</b> Phát triển năng khiếu nghệ thuật.</p>
+<p><b>Tiêu chí:</b></p>
+<ul>
+<li>Luyện tập thường xuyên</li>
+<li>Sáng tạo tiết mục</li>
+<li>Biểu diễn tự tin</li>
+</ul>
+</div>
+</div>
+
+<!-- Tiếng Anh -->
+<div class="club">
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+<div class="club-content">
+<h3>6. CLB Tiếng Anh</h3>
+<p><b>Tôn chỉ:</b> Nâng cao kỹ năng giao tiếp quốc tế.</p>
+<p><b>Tiêu chí:</b></p>
+<ul>
+<li>Luyện speaking</li>
+<li>Học từ vựng mới</li>
+<li>Tự tin giao tiếp</li>
+</ul>
+</div>
+</div>
+
+<!-- Thể thao -->
+<div class="club">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjX1R81bts25XfN6GVkJrc0dQXEgkzv3DKvez2lfqTJzPEgdweqoUCsMkB&s=10">
+<div class="club-content">
+<h3>7. CLB Thể thao</h3>
+<p><b>Tôn chỉ:</b> Rèn luyện thể chất và tinh thần.</p>
+<p><b>Tiêu chí:</b></p>
+<ul>
+<li>Chăm chỉ luyện tập</li>
+<li>Kỷ luật</li>
+<li>Đoàn kết</li>
+</ul>
+</div>
+</div>
+
+</div>
+</section>
+<section class="section" id="contact">
+<h2>LỊCH HOẠT ĐỘNG & ĐĂNG KÝ</h2>
+
+<!-- BẢNG LỊCH -->
+<div class="schedule">
+<table>
+<tr>
+<th>Câu lạc bộ</th>
+<th>Thời gian</th>
+<th>Địa điểm</th>
+</tr>
+
+<tr>
+<td>STEM</td>
+<td>Thứ 2 - 15:30</td>
+<td>Phòng Lab</td>
+</tr>
+
+<tr>
+<td>Văn hóa đọc</td>
+<td>Thứ 3 - 15:30</td>
+<td>Thư viện</td>
+</tr>
+
+<tr>
+<td>Sống xanh</td>
+<td>Thứ 4 - 15:30</td>
+<td>Sân trường</td>
+</tr>
+
+<tr>
+<td>Pháp luật</td>
+<td>Thứ 5 - 15:30</td>
+<td>Hội trường</td>
+</tr>
+
+<tr>
+<td>Văn nghệ</td>
+<td>Thứ 6 - 15:30</td>
+<td>Phòng nhạc</td>
+</tr>
+
+<tr>
+<td>Tiếng Anh</td>
+<td>Thứ 7 - 8:00</td>
+<td>Phòng 203</td>
+</tr>
+
+<tr>
+<td>Thể thao</td>
+<td>Chủ nhật - 7:00</td>
+<td>Sân thể thao</td>
+</tr>
+
+</table>
+</div>
+
+<!-- FORM ĐĂNG KÝ -->
+<div class="form-box">
+<h3>Đăng ký tham gia</h3>
+
+<form>
+<input type="text" placeholder="Họ và tên" required>
+<input type="email" placeholder="Email" required>
+
+<select required>
+<option value="">Chọn câu lạc bộ</option>
+<option>STEM</option>
+<option>Văn hóa đọc</option>
+<option>Sống xanh</option>
+<option>Pháp luật</option>
+<option>Văn nghệ</option>
+<option>Tiếng Anh</option>
+<option>Thể thao</option>
+</select>
+
+<textarea placeholder="Lý do tham gia" rows="4"></textarea>
+
+<button type="submit">Gửi đăng ký</button>
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+</footer>
+<script>
+// ================= PARTICLE BACKGROUND =================
+const canvas = document.createElement("canvas");
+canvas.style.position = "fixed";
+canvas.style.top = 0;
+canvas.style.left = 0;
+canvas.style.width = "100%";
+canvas.style.height = "100%";
+canvas.style.zIndex = "-1";
+document.body.appendChild(canvas);
+
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particlesArray = [];
+
+class Particle {
+    constructor(){
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 3 + 1;
+        this.speedX = Math.random() * 1 - 0.5;
+        this.speedY = Math.random() * 1 - 0.5;
+    }
+    update(){
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        if(this.x > canvas.width) this.x = 0;
+        if(this.x < 0) this.x = canvas.width;
+        if(this.y > canvas.height) this.y = 0;
+        if(this.y < 0) this.y = canvas.height;
+    }
+    draw(){
+        ctx.fillStyle = "rgba(0,255,255,0.7)";
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+        ctx.fill();
+    }
+}
+
+function init(){
+    particlesArray = [];
+    for(let i = 0; i < 120; i++){
+        particlesArray.push(new Particle());
+    }
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    for(let i=0;i<particlesArray.length;i++){
+        particlesArray[i].update();
+        particlesArray[i].draw();
+    }
+    requestAnimationFrame(animate);
+}
+
+init();
+animate();
+
+window.addEventListener("resize",()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    init();
+});
+
+// ================= FORM SUBMIT ALERT =================
+const form = document.querySelector("form");
+
+form.addEventListener("submit",function(e){
+    e.preventDefault();
+    alert("Đăng ký thành công! Ban chủ nhiệm sẽ liên hệ sớm.");
+    form.reset();
+});
+</script>
